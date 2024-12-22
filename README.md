@@ -8,50 +8,50 @@
 
 <!-- Project Description -->
 <p align="center">
-Cub3d projesi, bir 3D labirent oyunu oluşturmayı amaçlar. Oyuncu, birinci şahıs bakış açısıyla bir labirentte gezinerek belirli hedeflere ulaşmaya çalışır. Bu proje, oyun programlamasının temel unsurlarını, grafik yönetimini ve kullanıcı etkileşimini kapsamaktadır. Ayrıca, temel 3D oyun mekaniği, çarpışma algılama ve olay yönetimi alanlarında deneyim kazandırır.
+The Cub3d project aims to create a 3D labyrinth game. The player navigates through the maze from a first-person perspective, trying to reach certain goals. This project covers fundamental aspects of game programming, graphics management, and user interaction. Furthermore, it provides experience in basic 3D game mechanics, collision detection, and event management.
 </p>
 
 ---
 
-## Projenin Amacı 🎯
+## Project Purpose 🎯
 
-Cub3d projesinin amacı, birinci şahıs bakış açısıyla oynanan bir 3D labirent oyunu oluşturmaktır. Oyunda, kullanıcı bir karakteri labirent içinde yönlendirerek belirli hedeflere ulaşmayı amaçlar. Bu projede, 3D proje yapısı, oyun mekaniği, grafik yönetimi ve kullanıcı etkileşimi gibi konulara odaklanılır.
+The purpose of the Cub3d project is to develop a 3D maze game played from a first-person perspective. In the game, the user controls a character moving through a labyrinth to accomplish certain objectives. This project focuses on 3D project structure, game mechanics, graphics management, and user interaction.
 
-Labirent, bir dizi harita dosyasından oluşturulur ve karakter, oyuncunun yönlendirmesiyle bu ortamda hareket eder. Proje, çarpışma algılama, oyun olaylarını yönetme ve kullanıcı etkileşimlerini işleme gibi temel oyun programlama becerilerini geliştirmeye yöneliktir.
+The labyrinth is built from a series of map files, and the character moves around this environment based on user input. This project aims to develop essential game programming skills such as collision detection, event handling, and user interactions.
 
 ### Core Objectives 🏆
 
-- **Maze Creation (3D):** 3D ortamda harita dosyalarını okuyup doğru şekilde ekrana yansıtmak. Harita dosyaları duvar, geçiş alanları ve hedef noktalarını içerecek şekilde oyunun görsel yapısını ve işlevselliğini belirler. 🗺️
-- **Character Movement:** Kullanıcının, birinci şahıs bakış açısındaki karakteri ok tuşları veya benzeri kontrol tuşları ile özgürce hareket ettirebilmesi. Bu hareket, oyunun akıcılığı ve etkileşimi açısından önemlidir. 🕹️
-- **Collision Detection:** Karakter ile duvarlar veya diğer nesneler arasındaki çarpışmaların algılanması. Böylece geçilemez alanlarla etkileşim yönetilir ve oyunun fizik kuralları uygulanır. 🚧
-- **Game Events:** Oyunun başlangıcı, bitişi ve diğer kullanıcı etkileşimlerini yönetme. Bu, oyun akışını, oyuncu geri bildirimlerini, bölüm geçişlerini ve hedef tamamlama işlemlerini içerir. 🎮
-- **User Interaction:** Kullanıcı arayüzünü ve kontrol mekanizmalarını optimize ederek, oyuncunun oyuna kolay adapte olmasını ve keyifli bir deneyim yaşamasını sağlamak. 🖱️
-- **Game Performance:** Oyunun genel performansını ve verimliliğini artırmak. Akıcı grafik render işlemleri ve etkileşim yönetimi, oyunun teknik kalitesini ve oyuncunun deneyimini iyileştirir. ⚡
+- **Maze Creation (3D):** Read map files in a 3D environment and render them correctly on the screen. The map files, which include walls, passable areas, and goal points, define both the visual layout and functionality of the game. 🗺️
+- **Character Movement:** Allow the user to move the character freely from a first-person perspective using arrow keys or similar controls. This movement is crucial for smooth gameplay and interactivity. 🕹️
+- **Collision Detection:** Detect collisions between the character and walls or other objects. This ensures that impassable areas are respected and that game physics are applied. 🚧
+- **Game Events:** Manage events such as game start, end, and various user interactions. These include game flow, player feedback, level transitions, and completing objectives. 🎮
+- **User Interaction:** Optimize the user interface and control mechanisms so that the player can easily adapt to the game and have an enjoyable experience. 🖱️
+- **Game Performance:** Improve the overall performance and efficiency of the game. Smooth graphics rendering and event handling enhance both the technical quality of the game and the player’s experience. ⚡
 
 ---
 
-## Ray Casting Algoritması 🌍
+## Ray Casting Algorithm 🌍
 
-Cub3d projesindeki 3D labirent görünümünü elde etmenin temel yöntemi **Ray Casting** algoritmasıdır. Bu algoritma sayesinde 2D haritayı, birinci şahıs bakış açısıyla 3D görünüme dönüştürebiliriz.
+The fundamental method used to achieve the 3D labyrinth view in the Cub3d project is the **Ray Casting** algorithm. This algorithm transforms a 2D map into a first-person 3D view.
 
-**Ray Casting** prensipleri:
-1. Oyuncu, oyun dünyası içerisinde belirli bir konuma (x, y) ve bakış açısına (angle) sahiptir.
-2. Ekranın her dikey “pixel sütunu” için, oyuncunun bakış açısına göre bir “ışın” (ray) gönderilir.
-3. Işın, harita üzerinde duvar veya engel ile kesişene kadar uzatılır.
-4. Işının duvarla ilk kesiştiği nokta, o sütunda çizilecek olan duvar yüksekliğini belirler.
-5. Her sütun için duvar yüksekliği hesaplanarak, ekranda 3D bir perspektif algısı oluşturulur.
+**Ray Casting** principles:
+1. The player has a specific position (x, y) and viewing angle (angle) within the game world.
+2. For each vertical “pixel column” on the screen, a “ray” is cast according to the player’s viewing angle.
+3. The ray is extended until it intersects with a wall or obstacle on the map.
+4. The point where the ray first intersects a wall determines the wall height to be drawn in that column.
+5. By calculating wall heights for every column, a 3D perspective is simulated on the screen.
 
-Aşağıda örnek bir **C** fonksiyon kodu, basit bir ray casting mantığının iskeletini göstermektedir:
+Below is an example **C** function demonstrating a simple skeleton of the ray casting logic:
 
 ```c
 #include <math.h>
 #include <stdio.h>
 
-#define FOV 60.0      // Oyuncunun görüş açısı (derece)
+#define FOV 60.0      // Player's field of view in degrees
 #define SCREEN_WIDTH 640
 #define SCREEN_HEIGHT 480
 
-// Harita tanımı (0 -> boş alan, 1 -> duvar)
+// Map definition (0 -> empty space, 1 -> wall)
 int map[8][8] = {
     {1,1,1,1,1,1,1,1},
     {1,0,0,0,0,0,0,1},
@@ -63,64 +63,67 @@ int map[8][8] = {
     {1,1,1,1,1,1,1,1},
 };
 
-// Oyuncu başlangıç konumu
+// Player initial position
 float playerX = 3.5, playerY = 3.5;
 float playerAngle = 0.0;
 
 void cast_rays(void)
 {
-    // Ekrandaki her piksel sütunu için bir ışın hesapla
+    // Cast a ray for each pixel column on the screen
     for (int x = 0; x < SCREEN_WIDTH; x++) {
-        // Ekrandaki x sütunu, -FOV/2 ile +FOV/2 arasındaki açılara haritalanır
+        // Map the x column on screen to angles between -FOV/2 and +FOV/2
         float rayAngle = (playerAngle - (FOV / 2.0)) + ((float)x / SCREEN_WIDTH) * FOV;
         
-        // Dereceyi radyana çevir
+        // Convert degrees to radians
         float rayRad = rayAngle * M_PI / 180.0;
 
-        // Işın izleme (ray marching)
-        float stepSize = 0.1;  // Işın adım boyu
-        float distance = 0.0;  // Duvara olan mesafe
+        // Ray marching
+        float stepSize = 0.1;  // Ray step size
+        float distance = 0.0;  // Distance to wall
         float hitX = playerX;
         float hitY = playerY;
         
         int hitWall = 0;
 
-        // Harita sonuna kadar veya duvar bulana kadar ışını ilerlet
-        while (!hitWall && distance < 20.0) {  // 20 => maksimum görüş mesafesi gibi
+        // Advance the ray until it hits a wall or reaches the map boundary
+        while (!hitWall && distance < 20.0) {  // 20 -> example maximum view distance
             distance += stepSize;
             hitX = playerX + cos(rayRad) * distance;
             hitY = playerY + sin(rayRad) * distance;
 
-            // Harita sınırı içinde mi
+            // Check map boundaries
             if (hitX < 0 || hitX >= 8 || hitY < 0 || hitY >= 8) {
                 hitWall = 1;
-                distance = 20.0;  // Duvar bulunmuş gibi kabul et
+                distance = 20.0;  // Treat this as if a wall is hit
             } else if (map[(int)hitY][(int)hitX] == 1) {
-                hitWall = 1;  // Duvarı bulduk
+                hitWall = 1;  // A wall is found
             }
         }
 
-        // Duvar yüksekliğini hesapla (basit yaklaşım)
+        // Calculate wall height (simple approach)
         int wallHeight = (int)(SCREEN_HEIGHT / distance);
         
-        // Bu sütunda duvarı çizebilirsiniz:
-        // draw_vertical_line(x, wallHeight); // Örn. kullanıcıya özel bir çizim fonksiyonu
+        // Here, you could draw the wall for this column:
+        // draw_vertical_line(x, wallHeight); // e.g., a custom drawing function
     }
 }
+
 ```
 Bu örnek, ray casting mantığını çok basite indirgenmiş şekilde anlatmaktadır. Gerçekte, duvar çizimi ve texture mapping gibi ek işlemler yaparak daha detaylı bir görüntü elde edebilirsiniz.
 
 ## Tools Used 🛠️
 
-Cub3d projesinde kullanılan bazı önemli araçlar ve kütüphaneler şunlardır:
-
-- **MiniLibX:** Grafik işlemleri ve pencere yönetimi için kullanılan bir kütüphanedir.
-- **Xlib:** X Window System ile etkileşim kurmak için kullanılan bir kütüphanedir.
+Key tools and libraries used in the Cub3d project include:
+- **MiniLibX:** A library for graphics operations and window management.
+- **Xlib:** A library for interacting with the X Window System.
+Requirements 📋
 
 ## Requirements 📋
 
-Cub3d projesini çalıştırmak için aşağıdaki gereksinimlerin karşılanması gerekir:
+To run the Cub3d project, you need to meet the following requirements:
 
-- Unix tabanlı bir işletim sistemi (Linux, macOS)
-- GCC derleyicisi
-- MiniLibX kütüphanesi
+- A Unix-based operating system (Linux, macOS)
+- GCC compiler
+- MiniLibX library
+
+---
