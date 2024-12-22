@@ -133,3 +133,8 @@ To run the Cub3d project, you need to meet the following requirements:
 - MiniLibX library
 
 ---
+
+<!-- License -->
+## License 📜
+<p>This project is licensed under the <a href="LICENSE">MIT License</a>. For more details, please check the license file.</p>
+
