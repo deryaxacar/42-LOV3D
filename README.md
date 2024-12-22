@@ -1,14 +1,14 @@
 <!-- Project Title -->
 <h1 align="center"> 42 - cub3d 🕹️</h1>
 
-<!-- Project Logo or Image -->
-<p align="center">
-  <a target="blank"><img src="https://i.hizliresim.com/lc3txl2.png?_gl=1*1ia0uuv*_ga*MTg2MDIyNTgxMC4xNzM0ODc2OTYy*_ga_M9ZRXYS2YN*MTczNDg3Njk2MS4xLjEuMTczNDg3Njk3Ny40NC4wLjA." height="150" width="150" /></a>
-</p>
-
 <!-- Project Description -->
 <p align="center">
 The Cub3d project aims to create a 3D labyrinth game. The player navigates through the maze from a first-person perspective, trying to reach certain goals. This project covers fundamental aspects of game programming, graphics management, and user interaction. Furthermore, it provides experience in basic 3D game mechanics, collision detection, and event management.
+</p>
+
+<!-- Project Logo or Image -->
+<p align="center">
+  <a target="blank"><img src="https://i.hizliresim.com/lc3txl2.png?_gl=1*1ia0uuv*_ga*MTg2MDIyNTgxMC4xNzM0ODc2OTYy*_ga_M9ZRXYS2YN*MTczNDg3Njk2MS4xLjEuMTczNDg3Njk3Ny40NC4wLjA." height="150" width="150" /></a>
 </p>
 
 ---
@@ -28,9 +28,15 @@ The labyrinth is built from a series of map files, and the character moves aroun
 - **User Interaction:** Optimize the user interface and control mechanisms so that the player can easily adapt to the game and have an enjoyable experience. 🖱️
 - **Game Performance:** Improve the overall performance and efficiency of the game. Smooth graphics rendering and event handling enhance both the technical quality of the game and the player’s experience. ⚡
 
+## Ray Casting Algorithm 🌍
+
 ---
 
-## Ray Casting Algorithm 🌍
+<p align="center">
+  <a target="blank"><img src="https://i.hizliresim.com/o145kzp.PNG?_gl=1*1act2a9*_ga*MTg2MDIyNTgxMC4xNzM0ODc2OTYy*_ga_M9ZRXYS2YN*MTczNDg3Njk2MS4xLjEuMTczNDg3NzkwNC41OS4wLjA." /></a>
+</p>
+
+---
 
 The fundamental method used to achieve the 3D labyrinth view in the Cub3d project is the **Ray Casting** algorithm. This algorithm transforms a 2D map into a first-person 3D view.
 
