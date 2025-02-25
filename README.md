@@ -140,5 +140,5 @@ To run the Cub3d project, you need to meet the following requirements:
 
 ---
 
-<p align="center">© 2025 This project was created by Derya ACAR & Mertcan ÇAKIR.</p>
+<p align="center">2025 This project was created by Derya ACAR & Mertcan ÇAKIR.</p>
 
