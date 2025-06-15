@@ -8,7 +8,7 @@ The Cub3d project aims to create a 3D labyrinth game. The player navigates throu
 
 <!-- Project Logo or Image -->
 <p align="center">
-  <a target="blank"><img src="https://i.hizliresim.com/lc3txl2.png?_gl=1*1ia0uuv*_ga*MTg2MDIyNTgxMC4xNzM0ODc2OTYy*_ga_M9ZRXYS2YN*MTczNDg3Njk2MS4xLjEuMTczNDg3Njk3Ny40NC4wLjA." height="150" width="150" /></a>
+  <a target="blank"><img src="https://github.com/deryaxacar/42-LOV3D/blob/main/cub3dm.png" height="150" width="150" /></a>
 </p>
 
 ---
@@ -33,7 +33,7 @@ The labyrinth is built from a series of map files, and the character moves aroun
 ---
 
 <p align="center">
-  <a target="blank"><img src="https://i.hizliresim.com/o145kzp.PNG?_gl=1*1act2a9*_ga*MTg2MDIyNTgxMC4xNzM0ODc2OTYy*_ga_M9ZRXYS2YN*MTczNDg3Njk2MS4xLjEuMTczNDg3NzkwNC41OS4wLjA." /></a>
+  <a target="blank"><img src="https://github.com/deryaxacar/42-LOV3D/blob/main/ray-casting.png" /></a>
 </p>
 
 ---
